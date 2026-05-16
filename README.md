@@ -1,20 +1,14 @@
-# Kindle Highlights to Markdown
+# Kindle Highlights to Markdown CLI
 
-**Convert Kindle highlights into structured Markdown files.**
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
 
-## Overview
-This CLI tool parses Kindle's `My Clippings.txt` file and generates a Markdown file for each book, preserving highlights, notes, and timestamps.
+A CLI tool to convert Kindle's `My Clippings.txt` into structured Markdown for note-taking apps (Obsidian, Notion, Logseq).
 
 ## Features
-- Parse `My Clippings.txt` into book-specific Markdown files.
-- Preserve highlights, notes, and timestamps.
-- Support for nested notes and tags.
-- Customizable output templates (future extension).
-
-## Technical Architecture
-1. **Parser**: Uses regex to split `My Clippings.txt` into entries and extract metadata (title, location, date).
-2. **Generator**: Writes Markdown files with a structured format (book title, highlight type, location, date, content).
-3. **CLI**: argparse for input/output arguments.
+- ✅ Parse `My Clippings.txt` into structured Markdown.
+- ✅ Group highlights by book.
+- ✅ Preserve metadata (page numbers, timestamps).
+- ✅ Export to Obsidian, Notion, or plain Markdown.
 
 ## Installation
 ```bash
@@ -23,27 +17,23 @@ pip install kindle-highlights-to-md
 
 ## Usage
 ```bash
-kindle-highlights-to-md --input "My Clippings.txt" --output "output_directory"
+python3 kindle_highlights.py --input "My Clippings.txt" --output "highlights.md"
 ```
 
 ## Example Output
 ```markdown
-# Sample Book Title
+# Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones
 
-## Highlight
-**Location**: 123-124 | **Date**: Monday, June 1, 2020
-
-This is a highlight.
-
----
-
-## Note
-**Location**: 456 | **Date**: Tuesday, June 2, 2020
-
-This is a note.
+- You do not rise to the level of your goals. You fall to the level of your systems.
+  *- Your Highlight on page 15 | Location 224-225 | Added on Saturday, May 16, 2026 01:25:12 AM*
 
 ---
 ```
+
+## Roadmap
+- [ ] Support for Kobo/other e-readers.
+- [ ] Tagging system for highlights.
+- [ ] Direct Obsidian/Notion integration.
 
 ## License
 MIT
