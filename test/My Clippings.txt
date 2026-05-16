@@ -1,0 +1,9 @@
+The Pragmatic Programmer (Andrew Hunt)
+- Your Highlight on Page 42 | Location 642-643 | Added on Saturday, May 16, 2026 05:45:00 AM
+
+Debugging is twice as hard as writing the code in the first place.
+==========
+The Pragmatic Programmer (Andrew Hunt)
+- Your Highlight on Page 43 | Location 650-651 | Added on Saturday, May 16, 2026 05:46:00 AM
+
+Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.

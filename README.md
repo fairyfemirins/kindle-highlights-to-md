@@ -1,39 +1,37 @@
 # Kindle Highlights to Markdown CLI
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
-
-A CLI tool to convert Kindle's `My Clippings.txt` into structured Markdown for note-taking apps (Obsidian, Notion, Logseq).
+Convert Kindle's `My Clippings.txt` into Markdown files for Obsidian, Logseq, or any note-taking app.
 
 ## Features
-- ✅ Parse `My Clippings.txt` into structured Markdown.
-- ✅ Group highlights by book.
-- ✅ Preserve metadata (page numbers, timestamps).
-- ✅ Export to Obsidian, Notion, or plain Markdown.
+- Parse `My Clippings.txt` (Kindle's default export format).
+- Extract highlights, notes, and book metadata (Page, Location, Date).
+- Output to Markdown (compatible with Obsidian, Logseq).
+- Support for **Kobo** and **Apple Books** (future extensibility).
 
 ## Installation
 ```bash
-pip install kindle-highlights-to-md
+pip install --user .
 ```
 
 ## Usage
 ```bash
-python3 kindle_highlights.py --input "My Clippings.txt" --output "highlights.md"
+kindle2md "My Clippings.txt" ./output
 ```
 
 ## Example Output
 ```markdown
-# Atomic Habits: An Easy & Proven Way to Build Good Habits & Break Bad Ones
+# The Pragmatic Programmer (Andrew Hunt)
 
-- You do not rise to the level of your goals. You fall to the level of your systems.
-  *- Your Highlight on page 15 | Location 224-225 | Added on Saturday, May 16, 2026 01:25:12 AM*
+> Debugging is twice as hard as writing the code in the first place.
 
+**Page 42** | **Location 642-643** | **Saturday, May 16, 2026 05:45:00 AM**
+---
+
+> Therefore, if you write the code as cleverly as possible, you are, by definition, not smart enough to debug it.
+
+**Page 43** | **Location 650-651** | **Saturday, May 16, 2026 05:46:00 AM**
 ---
 ```
 
-## Roadmap
-- [ ] Support for Kobo/other e-readers.
-- [ ] Tagging system for highlights.
-- [ ] Direct Obsidian/Notion integration.
-
 ## License
-MIT
+MIT License. See [LICENSE](LICENSE).
